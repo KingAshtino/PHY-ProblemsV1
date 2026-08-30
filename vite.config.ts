@@ -1,7 +1,20 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { copyFileSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  base: "/PHY-ProblemsV1/",
+  plugins: [
+    react(),
+    {
+      name: "spa-github-pages-404",
+      closeBundle() {
+        const index = resolve("dist/index.html");
+        if (existsSync(index)) {
+          copyFileSync(index, resolve("dist/404.html"));
+        }
+      },
+    },
+  ],
+});

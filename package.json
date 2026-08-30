@@ -2,6 +2,7 @@
   "name": "phy1-questions",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://kingashtino.github.io/PHY-ProblemsV1/",
   "type": "module",
   "scripts": {
     "dev": "vite",
