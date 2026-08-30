@@ -135,9 +135,25 @@ h3 {
 }
 
 .cat-panel {
+  display: block;
   background: var(--card);
   border: 1px solid var(--line);
   padding: 1rem 1.1rem 1.15rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cat-panel:hover,
+.cat-panel:focus-visible {
+  border-color: var(--accent);
+}
+
+.cat-panel-a {
+  border-color: var(--c-a);
+}
+
+.cat-panel-b {
+  border-color: var(--c-b);
 }
 
 .cat-panel-c {
@@ -145,11 +161,18 @@ h3 {
   border-width: 2px;
 }
 
+.cat-go {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0.75rem 0 0;
+}
+
 .cat-panel h2 {
   margin: 0 0 0.45rem;
 }
 
-.cat-panel p:last-child {
+.cat-panel p {
   margin: 0;
 }
 
@@ -194,6 +217,7 @@ h3 {
   color: var(--ink);
   padding: 0.35rem 0.7rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .chip.on {

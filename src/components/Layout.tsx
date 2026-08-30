@@ -11,7 +11,9 @@ export function Layout() {
           <NavLink to="/" end>
             About the collection
           </NavLink>
-          <NavLink to="/browse">Browse problems</NavLink>
+          <NavLink to="/browse" end>
+            Browse problems
+          </NavLink>
         </nav>
       </header>
       <main>
