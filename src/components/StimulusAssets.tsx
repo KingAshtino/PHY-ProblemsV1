@@ -76,6 +76,17 @@ export function StimulusAssets({ assets }: { assets: StimulusAsset[] }) {
             </figure>
           );
         }
+        if (asset.type === "image") {
+          const src = asset.src.startsWith("http")
+            ? asset.src
+            : `${import.meta.env.BASE_URL}${asset.src.replace(/^\//, "")}`;
+          return (
+            <figure key={i} className="figure-photo">
+              <img src={src} alt={asset.alt} />
+              {asset.caption ? <figcaption>{asset.caption}</figcaption> : null}
+            </figure>
+          );
+        }
         return (
           <div key={i} className="table-block">
             {asset.caption ? <p className="caption">{asset.caption}</p> : null}

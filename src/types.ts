@@ -1,4 +1,4 @@
-export type Category = "A" | "B" | "C";
+export type Category = "A" | "B" | "C" | "D";
 
 export type Topic =
   | "incline"
@@ -9,7 +9,8 @@ export type Topic =
   | "com"
   | "rotation"
   | "torque"
-  | "oscillations";
+  | "oscillations"
+  | "kinematics";
 
 export type TaskKind =
   | "identify"
@@ -24,6 +25,7 @@ export type TableRow = Record<string, string | number>;
 
 export type StimulusAsset =
   | { type: "svg"; id: string; caption?: string }
+  | { type: "image"; src: string; alt: string; caption?: string }
   | {
       type: "table";
       caption?: string;
@@ -63,6 +65,7 @@ export type Problem = {
     numericAnswers?: string[];
     commonAIFailures?: string[];
   };
+  detailPath?: string;
   plantedAI?: {
     label: string;
     transcript: string;
@@ -81,6 +84,7 @@ export const TOPICS: { id: Topic; label: string }[] = [
   { id: "rotation", label: "Rotation" },
   { id: "torque", label: "Torque" },
   { id: "oscillations", label: "Oscillations" },
+  { id: "kinematics", label: "Kinematics" },
 ];
 
 export const TASK_KIND_LABEL: Record<TaskKind, string> = {

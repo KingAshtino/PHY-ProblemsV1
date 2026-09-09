@@ -14,13 +14,15 @@ export function Layout() {
           <NavLink to="/browse" end>
             Browse problems
           </NavLink>
+          <NavLink to="/major">Major Collaborative Problems</NavLink>
         </nav>
       </header>
       <main>
         <Outlet />
       </main>
       <footer className="site-foot">
-        Original problems for an introductory mechanics course. Category C is the point of the collection.
+        Original problems for an introductory mechanics course. Category C and Major Collaborative
+        Problems are the point of the collection.
       </footer>
     </div>
   );

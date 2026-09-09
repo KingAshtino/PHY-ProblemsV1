@@ -58,7 +58,8 @@ a {
 
 .topbar nav {
   display: flex;
-  gap: 1.1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
 }
 
 .topbar a {
@@ -158,6 +159,11 @@ h3 {
 
 .cat-panel-c {
   border-color: var(--c-c);
+  border-width: 2px;
+}
+
+.cat-panel-d {
+  border-color: #5a2e6e;
   border-width: 2px;
 }
 
@@ -292,6 +298,9 @@ h3 {
 .badge-C {
   color: var(--c-c);
 }
+.badge-D {
+  color: #5a2e6e;
+}
 
 .jagged,
 .card-blurb,
@@ -415,9 +424,59 @@ th .unit {
   color: var(--muted);
 }
 
+.figure-photo {
+  margin: 1rem 0 1.4rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 0.4rem;
+}
+
+.figure-photo img,
+.card-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figure-photo figcaption {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.45rem 0.2rem 0.15rem;
+}
+
+.major-card .cat-go {
+  margin-top: 0.5rem;
+}
+
+.major-page h3 {
+  margin-top: 1.15rem;
+}
+
+.major-page ul,
+.major-page ol {
+  margin: 0.4rem 0 0.9rem;
+  padding-left: 1.25rem;
+}
+
+.major-page li {
+  margin: 0.25rem 0;
+}
+
+.equation {
+  font-family: var(--serif);
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.boxed {
+  border: 1px solid var(--ink);
+  padding: 0.6rem 0.8rem;
+}
+
 @media (min-width: 800px) {
   .cat-grid {
-    grid-template-columns: 1fr 1fr 1.15fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

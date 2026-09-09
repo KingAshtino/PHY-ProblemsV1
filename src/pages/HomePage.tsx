@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
 import { countByCategory } from "../data/problems";
 
-const groups = [
+const groups: {
+  id: "A" | "B" | "C" | "D";
+  kicker: (n: number) => string;
+  title: string;
+  className: string;
+  body: string;
+  to?: string;
+}[] = [
   {
     id: "A" as const,
     kicker: (n: number) => `Category A · ${n} problems`,
@@ -23,6 +30,14 @@ const groups = [
     className: "cat-panel cat-panel-c",
     body: "Imperfect diagrams and data. Identify what counts, choose a model, use AI only where it helps, and judge whether a planted AI attempt is justified. A numerical answer is often the wrong kind of ending.",
   },
+  {
+    id: "D" as const,
+    kicker: (n: number) => `Major Collaborative Problems · ${n}`,
+    title: "Skier over moguls and more",
+    className: "cat-panel cat-panel-d",
+    to: "/major",
+    body: "Longer modeling assignments. Build consistent graphs from an asymmetric terrain diagram, connect kinematics to forces, and collaborate with GenAI without surrendering the final model.",
+  },
 ];
 
 export function HomePage() {
@@ -40,12 +55,14 @@ export function HomePage() {
           <Link
             key={g.id}
             className={g.className}
-            to={`/browse?category=${g.id}`}
+            to={g.to ?? `/browse?category=${g.id}`}
           >
             <p className="kicker">{g.kicker(n[g.id])}</p>
             <h2>{g.title}</h2>
             <p>{g.body}</p>
-            <p className="cat-go">Browse Category {g.id}</p>
+            <p className="cat-go">
+              {g.id === "D" ? "Open Major Collaborative Problems" : `Browse Category ${g.id}`}
+            </p>
           </Link>
         ))}
       </div>

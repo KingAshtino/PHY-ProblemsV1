@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { CategoryBadge } from "../components/ProblemCard";
 import { StimulusAssets } from "../components/StimulusAssets";
 import { getProblem } from "../data/problems";
@@ -19,6 +19,10 @@ export function ProblemPage() {
         </p>
       </article>
     );
+  }
+
+  if (problem.detailPath) {
+    return <Navigate to={problem.detailPath} replace />;
   }
 
   const topic = TOPICS.find((t) => t.id === problem.topic)?.label ?? problem.topic;
