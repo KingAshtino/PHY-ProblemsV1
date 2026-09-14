@@ -10,6 +10,7 @@ const CATS: { id: Category | "all"; label: string }[] = [
   { id: "B", label: "B · jagged twins" },
   { id: "C", label: "C · human advantage" },
   { id: "D", label: "Major collaborative" },
+  { id: "E", label: "Proposal" },
 ];
 
 function browsePath(category: Category | "all", topic: Topic | "all") {

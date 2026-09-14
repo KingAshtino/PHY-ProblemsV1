@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { countByCategory } from "../data/problems";
 
 const groups: {
-  id: "A" | "B" | "C" | "D";
+  id: "A" | "B" | "C" | "D" | "E";
   kicker: (n: number) => string;
   title: string;
   className: string;
@@ -38,6 +38,14 @@ const groups: {
     to: "/major",
     body: "Longer modeling assignments. Build consistent graphs from an asymmetric terrain diagram, connect kinematics to forces, and collaborate with GenAI without surrendering the final model.",
   },
+  {
+    id: "E" as const,
+    kicker: (n: number) => `Proposal Problems · ${n}`,
+    title: "Short moguls tasks",
+    className: "cat-panel cat-panel-e",
+    to: "/proposal",
+    body: "The skier-over-moguls situation split into shorter, proposal-ready questions: four qualitative graphs, component reasoning, apparent weight, and the constant-speed versus constant-v_x distinction.",
+  },
 ];
 
 export function HomePage() {
@@ -61,7 +69,11 @@ export function HomePage() {
             <h2>{g.title}</h2>
             <p>{g.body}</p>
             <p className="cat-go">
-              {g.id === "D" ? "Open Major Collaborative Problems" : `Browse Category ${g.id}`}
+              {g.id === "D"
+                ? "Open Major Collaborative Problems"
+                : g.id === "E"
+                  ? "Open Proposal Problems"
+                  : `Browse Category ${g.id}`}
             </p>
           </Link>
         ))}

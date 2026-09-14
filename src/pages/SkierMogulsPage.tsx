@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const imgSrc = `${import.meta.env.BASE_URL}skier-moguls.png`;
+import { MogulFigure } from "../components/MogulFigure";
 
 export function SkierMogulsPage() {
   const [showRubric, setShowRubric] = useState(false);
@@ -24,17 +23,12 @@ export function SkierMogulsPage() {
         the limits of the model, and use generative AI as a collaborator you are responsible for
         evaluating.
       </p>
+      <p className="muted">
+        Shorter, proposal-sized versions of this situation are in{" "}
+        <Link to="/proposal">Proposal Problems</Link>.
+      </p>
 
-      <figure className="figure-photo">
-        <img
-          src={imgSrc}
-          alt="Side view of a skier moving left to right over repeated asymmetric moguls. The uphill is long and gentle; the downhill is short and steep. Points A through E mark a trough, uphill, crest, downhill, and the next trough. A dashed line shows the center-of-mass path."
-        />
-        <figcaption>
-          Skier traveling over repeated asymmetric moguls. Motion to the right. Gentle uphill,
-          steep downhill. Center-of-mass path dashed. Diagram generated with ChatGPT 5.6.
-        </figcaption>
-      </figure>
+      <MogulFigure />
 
       <section>
         <h2>The physical situation</h2>

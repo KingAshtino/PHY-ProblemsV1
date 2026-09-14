@@ -6,6 +6,9 @@ export function CategoryBadge({ category }: { category: Problem["category"] }) {
   if (category === "D") {
     return <span className="badge badge-D">Major</span>;
   }
+  if (category === "E") {
+    return <span className="badge badge-E">Proposal</span>;
+  }
   return <span className={`badge badge-${category}`}>Category {category}</span>;
 }
 
@@ -27,6 +30,9 @@ export function ProblemCard({ problem }: { problem: Problem }) {
       ) : null}
       {problem.category === "D" ? (
         <p className="card-blurb">Major assignment · graph modeling · GenAI collaboration</p>
+      ) : null}
+      {problem.category === "E" ? (
+        <p className="card-blurb">Proposal task · short · same moguls situation</p>
       ) : null}
     </Link>
   );

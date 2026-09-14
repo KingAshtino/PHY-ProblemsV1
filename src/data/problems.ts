@@ -1,10 +1,17 @@
-import { categoryD } from "./categoryD";
 import { categoryA } from "./categoryA";
 import { categoryB } from "./categoryB";
 import { categoryC } from "./categoryC";
+import { categoryD } from "./categoryD";
+import { categoryE } from "./categoryE";
 import type { Category, Problem, Topic } from "../types";
 
-export const problems: Problem[] = [...categoryD, ...categoryC, ...categoryA, ...categoryB];
+export const problems: Problem[] = [
+  ...categoryE,
+  ...categoryD,
+  ...categoryC,
+  ...categoryA,
+  ...categoryB,
+];
 
 export function getProblem(id: string): Problem | undefined {
   return problems.find((p) => p.id === id);
@@ -31,5 +38,6 @@ export function countByCategory(): Record<Category, number> {
     B: problems.filter((p) => p.category === "B").length,
     C: problems.filter((p) => p.category === "C").length,
     D: problems.filter((p) => p.category === "D").length,
+    E: problems.filter((p) => p.category === "E").length,
   };
 }

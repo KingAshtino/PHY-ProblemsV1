@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
+import { MogulFigure } from "../components/MogulFigure";
 import { categoryD } from "../data/categoryD";
-
-const imgSrc = `${import.meta.env.BASE_URL}skier-moguls.png`;
 
 export function MajorIndexPage() {
   const problem = categoryD[0];
@@ -20,11 +19,7 @@ export function MajorIndexPage() {
           <span className="mins">{problem.estimatedMinutes} min</span>
         </div>
         <h3>{problem.title}</h3>
-        <img
-          className="card-thumb"
-          src={imgSrc}
-          alt="Preview of the asymmetric mogul diagram used in the assignment."
-        />
+        <MogulFigure />
         <p className="card-blurb">
           Four qualitative motion graphs, force reasoning at crest and trough, model critique, and
           a required GenAI collaboration record.

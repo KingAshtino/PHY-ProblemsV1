@@ -167,6 +167,11 @@ h3 {
   border-width: 2px;
 }
 
+.cat-panel-e {
+  border-color: #2f5d50;
+  border-width: 2px;
+}
+
 .cat-go {
   font-family: var(--sans);
   font-size: 0.85rem;
@@ -300,6 +305,9 @@ h3 {
 }
 .badge-D {
   color: #5a2e6e;
+}
+.badge-E {
+  color: #2f5d50;
 }
 
 .jagged,

@@ -8,6 +8,7 @@ A browsable set of introductory mechanics problems in three categories:
 - **B — Modified twins.** Same physics as A, with a jagged interface (bad diagrams, noisy data, conflicting captions).
 - **C — Human-advantage tasks.** Messy stimuli, modeling choices, and planted AI write-ups to critique.
 - **Major Collaborative Problems.** Longer assignments (starting with the skier-over-moguls modeling task). You keep the representations consistent and work with GenAI without handing it the last word.
+- **Proposal Problems.** Shorter standalone tasks from the same moguls situation, written for a research proposal.
 
 ## Run locally
 

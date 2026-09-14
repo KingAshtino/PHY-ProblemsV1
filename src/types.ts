@@ -1,4 +1,4 @@
-export type Category = "A" | "B" | "C" | "D";
+export type Category = "A" | "B" | "C" | "D" | "E";
 
 export type Topic =
   | "incline"
