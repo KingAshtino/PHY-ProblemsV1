@@ -20,8 +20,8 @@ export function SkierMogulsPage() {
       <h1>Physics Modeling with GenAI: Skier Traveling Over Moguls</h1>
       <p className="lede">
         Construct a motion model from an asymmetric terrain diagram, connect it to forces, name
-        the limits of the model, and use generative AI as a collaborator you are responsible for
-        evaluating.
+        the limits of the model, and use generative AI as a collaborator. The collaboration
+        summary you turn in is written by the AI, not by you.
       </p>
       <p className="muted">
         Shorter, proposal-sized versions of this situation are in{" "}
@@ -232,51 +232,62 @@ export function SkierMogulsPage() {
           <strong>not simply to obtain the final answer</strong>, but to use AI as part of your
           modeling and reasoning process.
         </p>
-        <p>In your submitted PDF, include the following.</p>
-        <h3>1. AI system</h3>
         <p>
-          State which GenAI service and model you used and the date on which you used it. For
-          example: <em>ChatGPT GPT-5.6, 09/09/2026</em>. Because GenAI systems can change over
-          time, both the model and date are important.
+          You remain responsible for deciding what physics model you believe. The{" "}
+          <strong>collaboration summary that is submitted must be written by the AI</strong>, not
+          by you. Do not write that report yourself.
         </p>
-        <h3>2. Your initial interaction</h3>
-        <p>Summarize or provide the initial prompt you gave the AI. Explain:</p>
+        <h3>1. Work with the AI</h3>
+        <p>In the conversation you should:</p>
         <ul>
-          <li>what information you gave it</li>
-          <li>what you asked it to do</li>
-          <li>whether you provided the diagram</li>
-          <li>what assumptions you told it to use</li>
+          <li>give it the diagram if you can, and state the modeling assumptions</li>
+          <li>ask it to help construct or check the four graphs and the physics questions</li>
+          <li>
+            independently identify anything that is incorrect, physically questionable,
+            insufficiently justified, inconsistent between graphs, based on an unstated
+            assumption, or missing
+          </li>
+          <li>
+            continue the conversation: point out a possible mistake, ask it to reconsider one
+            graph, supply something from the image it overlooked, challenge an assumption, or ask
+            it to compare two models
+          </li>
         </ul>
-        <h3>3. Initial AI reasoning</h3>
         <p>
-          Show the AI’s initial proposed solution or the important parts of its reasoning. Do{" "}
-          <strong>not</strong> assume that this response is correct.
+          Do <strong>not</strong> assume the AI’s first response is correct. Your graphs and
+          physics answers in Parts I–IV are still yours to decide.
         </p>
-        <h3>4. Evaluate the AI</h3>
+        <h3>2. Ask the AI to write the submitted summary</h3>
         <p>
-          Before asking the AI to revise its answer, independently identify anything that you
-          believe is incorrect, physically questionable, insufficiently justified, inconsistent
-          between graphs, based on an unstated assumption, or missing. If you believe the AI
-          response is completely correct, explain <strong>why you think it is correct</strong>{" "}
-          rather than simply stating that it is.
+          After you have a model you are willing to stand behind, prompt the AI to produce the
+          collaboration summary that will be turned in. Instruct it to include at least:
         </p>
-        <h3>5. Collaborate with the AI</h3>
+        <ul>
+          <li>
+            the GenAI service, model, and date (for example: <em>ChatGPT GPT-5.6, 09/09/2026</em>)
+          </li>
+          <li>
+            what you initially asked, whether the diagram was provided, and which assumptions you
+            stated
+          </li>
+          <li>the important parts of its initial reasoning</li>
+          <li>what you challenged, corrected, or asked it to reconsider</li>
+          <li>how the conversation changed the model</li>
+          <li>the final four-graph model and physics answers as the AI now understands them</li>
+          <li>
+            what the AI believes <strong>you</strong> contributed that it did not provide
+            correctly or adequately on its own
+          </li>
+        </ul>
+        <h3>3. Submit the AI’s summary</h3>
         <p>
-          Use your evaluation to continue the conversation. You might point out a possible
-          mistake, ask the AI to reconsider one graph, provide information from the image that it
-          overlooked, challenge one of its assumptions, or ask it to compare two possible models.
-          Record the most important follow-up interaction.
+          Put the AI-generated summary in the submitted PDF. You may ask the AI to revise the
+          summary if it misrepresents the conversation, but you should{" "}
+          <strong>not replace it with a write-up of your own</strong>.
         </p>
-        <h3>6. Final model</h3>
         <p>
-          Submit your final four graphs and your answers to the physics questions. These do{" "}
-          <strong>not</strong> have to be identical to the AI’s final answer. You are responsible
-          for deciding what you believe is the best physical model.
-        </p>
-        <h3>7. Human contribution</h3>
-        <p>
-          Finally answer: <strong>What did you contribute to the solution that the AI did not
-          provide correctly or adequately on its own?</strong> Be specific.
+          If you still believe the summary is inaccurate after a revision, add at most a short
+          note <em>after</em> the AI text saying so. Do not rewrite the report.
         </p>
       </section>
 
@@ -323,7 +334,11 @@ export function SkierMogulsPage() {
                 <em>N</em> &lt; <em>mg</em> at the crest, <em>N</em> &gt; <em>mg</em> at the trough
               </li>
               <li>Heaviest in the trough, lightest at the crest</li>
-              <li>GenAI model + date, independent critique, and a stated human contribution</li>
+              <li>
+                Submitted collaboration summary authored by the AI (model + date, conversation,
+                challenges, final model, claimed human contribution)
+              </li>
+              <li>Student did not substitute a self-written collaboration report</li>
             </ul>
             <h3>Common AI failures</h3>
             <ul>
@@ -335,7 +350,8 @@ export function SkierMogulsPage() {
                 <sub>y</sub> = 0 at every crest and trough
               </li>
               <li>Crest heavier than trough</li>
-              <li>Pasting an AI solution as the submitted model</li>
+              <li>Pasting an AI physics solution as Parts I–IV without evaluation</li>
+              <li>Student writing the collaboration summary instead of submitting the AI’s</li>
             </ul>
           </div>
         ) : null}

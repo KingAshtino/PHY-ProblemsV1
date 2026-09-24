@@ -36,7 +36,7 @@ const groups: {
     title: "Skier over moguls and more",
     className: "cat-panel cat-panel-d",
     to: "/major",
-    body: "Longer modeling assignments. Build consistent graphs from an asymmetric terrain diagram, connect kinematics to forces, and collaborate with GenAI without surrendering the final model.",
+    body: "Longer modeling assignments. Build consistent graphs from an asymmetric terrain diagram, connect kinematics to forces, and have the AI write the collaboration summary that gets submitted.",
   },
   {
     id: "E" as const,
@@ -44,7 +44,7 @@ const groups: {
     title: "Short moguls tasks",
     className: "cat-panel cat-panel-e",
     to: "/proposal",
-    body: "The skier-over-moguls situation split into shorter, proposal-ready questions: four qualitative graphs, component reasoning, apparent weight, and the constant-speed versus constant-v_x distinction.",
+    body: "The skier-over-moguls situation split into shorter, proposal-ready questions: four qualitative graphs, component reasoning, apparent weight, constant-speed versus constant-v_x, and an AI-authored collaboration summary.",
   },
 ];
 

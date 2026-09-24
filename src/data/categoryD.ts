@@ -10,7 +10,7 @@ export const categoryD: Problem[] = [
     detailPath: "/major/skier-moguls",
     jaggedFeature: "asymmetric terrain, constant path-speed vs constant v_x, GenAI collaboration",
     stimulus: {
-      text: "A multi-part modeling assignment: qualitative v_x, v_y, a_x, and a_y graphs for a skier whose speed along asymmetric moguls is approximately constant, then forces, model limits, and a required GenAI collaboration record.",
+      text: "A multi-part modeling assignment: qualitative v_x, v_y, a_x, and a_y graphs for a skier whose speed along asymmetric moguls is approximately constant, then forces, model limits, and an AI-authored collaboration summary for submission.",
       assets: [
         {
           type: "image",
@@ -50,12 +50,12 @@ export const categoryD: Problem[] = [
         id: "p5",
         kind: "critique",
         prompt:
-          "Part V: Use GenAI as a collaborator. Record the system/model/date, initial prompt, AI reasoning, your independent critique, follow-up, final model, and what you contributed that the AI did not.",
+          "Part V: Collaborate with GenAI on the model, then have the AI write the collaboration summary that will be submitted. Do not write that report yourself.",
       },
     ],
     rubric: {
       summary:
-        "The path speed is approximately constant, so v_x and v_y share that speed through the local slope. The terrain is asymmetric: more time on the gentle uphill than on the steep downhill. Crests and troughs have v_y = 0 but nonzero a_y (curvature). Apparent weight is largest in the trough and smallest at the crest. The GenAI section must show independent evaluation, not a pasted final answer.",
+        "The path speed is approximately constant, so v_x and v_y share that speed through the local slope. The terrain is asymmetric: more time on the gentle uphill than on the steep downhill. Crests and troughs have v_y = 0 but nonzero a_y (curvature). Apparent weight is largest in the trough and smallest at the crest. The submitted collaboration summary must be written by the AI after a real back-and-forth, not authored by the student.",
       mustInclude: [
         "Same labeled time axis (A–E, two cycles) on all four graphs",
         "Asymmetry in the graphs (steep downhill is shorter in time than gentle uphill)",
@@ -67,7 +67,7 @@ export const categoryD: Problem[] = [
         "N < mg at the crest, N > mg at the trough; heaviest in the trough, lightest at the crest",
         "Losing contact means N → 0 at the crest if speed is large enough",
         "constant total speed ≠ constant horizontal velocity",
-        "GenAI record with model name and date, critique before revision, and a stated human contribution",
+        "AI-authored summary covering model/date, initial ask, challenges, revised model, and claimed human contribution",
       ],
       commonAIFailures: [
         "Drawing four sine waves because the moguls repeat",
@@ -75,7 +75,8 @@ export const categoryD: Problem[] = [
         "Putting equal time on uphill and downhill despite the asymmetric shape",
         "Claiming a_y = 0 wherever v_y = 0",
         "Reversing apparent weight (crest heavier than trough)",
-        "Treating the GenAI transcript as the submitted model without evaluation",
+        "Treating the GenAI transcript as the submitted physics model without evaluation",
+        "Student writing the collaboration summary instead of submitting the AI’s",
       ],
     },
   },

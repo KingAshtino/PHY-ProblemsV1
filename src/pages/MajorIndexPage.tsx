@@ -9,8 +9,8 @@ export function MajorIndexPage() {
       <h1>Major Collaborative Problems</h1>
       <p className="lede">
         These are longer assignments. You build a model from imperfect or richly structured
-        information, keep the representations consistent, and work with generative AI without
-        handing it the last word.
+        information, keep the representations consistent, and work with generative AI. You decide
+        the physics model. The AI writes the collaboration summary that is submitted.
       </p>
       <Link to="/major/skier-moguls" className="problem-card major-card">
         <div className="card-meta">
@@ -22,7 +22,7 @@ export function MajorIndexPage() {
         <MogulFigure />
         <p className="card-blurb">
           Four qualitative motion graphs, force reasoning at crest and trough, model critique, and
-          a required GenAI collaboration record.
+          an AI-authored collaboration summary for submission.
         </p>
         <p className="cat-go">Open the assignment</p>
       </Link>

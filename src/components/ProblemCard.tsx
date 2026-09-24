@@ -29,7 +29,7 @@ export function ProblemCard({ problem }: { problem: Problem }) {
         <p className="card-blurb">Messy stimulus · modeling · AI critique</p>
       ) : null}
       {problem.category === "D" ? (
-        <p className="card-blurb">Major assignment · graph modeling · GenAI collaboration</p>
+        <p className="card-blurb">Major assignment · graph modeling · AI-written collaboration summary</p>
       ) : null}
       {problem.category === "E" ? (
         <p className="card-blurb">Proposal task · short · same moguls situation</p>

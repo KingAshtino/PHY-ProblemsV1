@@ -351,4 +351,51 @@ export const categoryE: Problem[] = [
       commonAIFailures: ["Saying only v_x changes and leaving timing of v_y untouched without comment"],
     },
   },
+  {
+    id: "skier-ai-summary",
+    category: "E",
+    topic: "kinematics",
+    title: "AI writes the collaboration summary",
+    estimatedMinutes: 15,
+    detailPath: "/proposal/skier-ai-summary",
+    jaggedFeature: "submitted collaboration report is authored by the AI",
+    stimulus: {
+      text: `${setup}\n\nWork with a generative AI system on the four qualitative graphs (or on one of the shorter moguls tasks). You remain responsible for the physics. The collaboration summary that will be submitted must be written by the AI, not by you.`,
+      assets: [mogulImage],
+    },
+    tasks: [
+      {
+        id: "t1",
+        kind: "critique",
+        prompt:
+          "Collaborate: give the AI the diagram if you can, ask it for graphs or reasoning, then independently challenge anything that is wrong, unjustified, or inconsistent.",
+      },
+      {
+        id: "t2",
+        kind: "critique",
+        prompt:
+          "Prompt the AI to write the summary that will be turned in. It must include: service/model/date; what you asked; its initial reasoning; what you challenged; how the model changed; the final physics as it now understands it; and what it believes you contributed that it did not provide adequately on its own.",
+      },
+      {
+        id: "t3",
+        kind: "critique",
+        prompt:
+          "Submit that AI-generated summary. You may ask it to revise if it misrepresents the conversation. Do not replace it with a write-up of your own. If it is still inaccurate, add at most a short note after the AI text.",
+      },
+    ],
+    rubric: {
+      summary:
+        "The physics collaboration can be brief. The submitted artifact is an AI-authored summary of the exchange, not a student-written methods paragraph.",
+      mustInclude: [
+        "Evidence of a real challenge or evaluation, not a single uncritical prompt",
+        "Summary produced by the AI, covering model/date, ask, pushback, and claimed human contribution",
+        "Student did not substitute their own collaboration report",
+      ],
+      commonAIFailures: [
+        "Flattering the user as the source of ideas the AI actually introduced",
+        "Omitting mistakes the AI made earlier in the thread",
+        "Writing a generic ‘we collaborated well’ paragraph with no physics content",
+      ],
+    },
+  },
 ];

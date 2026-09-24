@@ -9,7 +9,9 @@ export function ProposalIndexPage() {
       <p className="lede">
         Shorter tasks in the same style as the major moguls assignment, written so they can stand
         alone in a research proposal. They share one situation and one diagram. Each asks for a
-        small, inspectable piece of the model.
+        small, inspectable piece of the model. The collaboration write-up, when required, is
+        produced by the AI and submitted as-is (or after the AI revises it)—not authored by the
+        student.
       </p>
       <MogulFigure />
       <p className="caption">
