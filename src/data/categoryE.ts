@@ -16,7 +16,7 @@ export const categoryE: Problem[] = [
     id: "skier-graphs",
     category: "E",
     topic: "kinematics",
-    title: "Proposed Task: Skier traveling over moguls",
+    title: "Part A — Proposed Task: Skier traveling over moguls",
     estimatedMinutes: 20,
     detailPath: "/proposal/skier-graphs",
     jaggedFeature: "asymmetric terrain; constant path-speed is not constant v_x",

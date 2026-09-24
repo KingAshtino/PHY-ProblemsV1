@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Gpt56SkierGraphsExample } from "../components/Gpt56SkierGraphsExample";
 import { MogulFigure } from "../components/MogulFigure";
 import { getProblem } from "../data/problems";
 import { TASK_KIND_LABEL } from "../types";
@@ -49,6 +50,7 @@ export function ProposalTaskPage() {
           ))}
         </ol>
       </section>
+      {problem.id === "skier-graphs" ? <Gpt56SkierGraphsExample /> : null}
       <section className="rubric-wrap">
         <button type="button" className="button" onClick={() => setShowRubric((v) => !v)}>
           {showRubric ? "Hide rubric" : "Show rubric / self-check"}

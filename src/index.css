@@ -414,6 +414,23 @@ th .unit {
   margin: 0;
 }
 
+.ai-block blockquote h3 {
+  margin: 1.1rem 0 0.45rem;
+  font-size: 1rem;
+}
+
+.ai-block blockquote ul {
+  margin: 0.4rem 0 0.8rem;
+}
+
+.example-ai {
+  margin-top: 1.5rem;
+}
+
+.ai-table {
+  font-size: 0.88rem;
+}
+
 .rubric {
   margin-top: 1rem;
   padding: 0.9rem 1rem;
