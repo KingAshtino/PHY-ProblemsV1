@@ -52,6 +52,7 @@ export function HomePage() {
   const n = countByCategory();
   return (
     <article className="home">
+      <p className="kicker">Collection</p>
       <h1>A Physics I collection built around human advantage</h1>
       <p className="lede">
         Ordinary homework is here as a control set. The problems that matter are the ones where the

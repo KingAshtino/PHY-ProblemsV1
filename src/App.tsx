@@ -3,6 +3,8 @@ import { Layout } from "./components/Layout";
 import { BrowsePage } from "./pages/BrowsePage";
 import { HomePage } from "./pages/HomePage";
 import { MajorIndexPage } from "./pages/MajorIndexPage";
+import { PossibleIndexPage } from "./pages/PossibleIndexPage";
+import { PossibleSituationPage } from "./pages/PossibleSituationPage";
 import { ProblemPage } from "./pages/ProblemPage";
 import { ProposalIndexPage } from "./pages/ProposalIndexPage";
 import { ProposalTaskPage } from "./pages/ProposalTaskPage";
@@ -15,14 +17,17 @@ export default function App() {
     <BrowserRouter basename={basename}>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Navigate to="/possible" replace />} />
+          <Route path="/possible" element={<PossibleIndexPage />} />
+          <Route path="/possible/:slug" element={<PossibleSituationPage />} />
+          <Route path="/collection" element={<HomePage />} />
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/major" element={<MajorIndexPage />} />
           <Route path="/major/skier-moguls" element={<SkierMogulsPage />} />
           <Route path="/proposal" element={<ProposalIndexPage />} />
           <Route path="/proposal/:id" element={<ProposalTaskPage />} />
           <Route path="/problem/:id" element={<ProblemPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/possible" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
